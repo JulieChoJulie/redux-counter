@@ -14,6 +14,10 @@
     cursor: pointer;
 }
 
+.Buttons .add {
+    background: #37b24d;
+}
+
 .Buttons .add:hover {
     background: #40c057;
 }

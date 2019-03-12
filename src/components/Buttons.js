@@ -13,11 +13,11 @@ const defaultProps = {
 
 const Buttons = ({onCreate, onRemove}) => {
     return (
-        <div className="buttons">
+        <div className="Buttons">
             <div className="btn add" onClick={onCreate}>
                 Create
             </div>
-            <div classNAme="btn remove" onClick={onRemove}>
+            <div className="btn remove" onClick={onRemove}>
                 Remove
             </div>
         </div>

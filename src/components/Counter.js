@@ -23,14 +23,14 @@ const defaultProps = {
 const Counter = ({index, number, color, onIncrement, onDecrement, onSetColor}) => {
     return (
         <div className="Counter"
-             onClick={onIncrement(index)}
+             onClick={() => onIncrement(index)}
              onContextMenu={
                  (e) => {
                      e.preventDefault();
                      onDecrement(index);
                  }
              }
-             onDoubleClick={onSetColor(index)}
+             onDoubleClick={() => onSetColor(index)}
              style={{backgroundColor: color}}>
             {number}
         </div>

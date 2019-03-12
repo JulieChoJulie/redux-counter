@@ -29,15 +29,16 @@ function counter(state=initialState, action) {
             };
         case types.INCREMENT:
             return {
-               counters: [
-                   ...counters.slice(0, action.index),
-                   {
-                       ...counters[action.index],
-                       number: counters[action.index].number + 1,
-                   },
-                   ...counters.slice(action.index+1, counters.length)
-               ]
+                counters: [
+                    ...counters.slice(0, action.index),
+                    {
+                        ...counters[action.index],
+                        number: counters[action.index].number + 1
+                    },
+                    ...counters.slice(action.index + 1, counters.length)
+                ]
             };
+
         case types.DECREMENT:
             return {
                 counters: [
