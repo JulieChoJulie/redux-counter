@@ -5,8 +5,8 @@ import { getRandomColor} from '../utils';
 
 // state in store is passed as props
 const mapStateToProps = (state) => ({
-    color: state.color,
-    number: state.number,
+    color: state.colorData.color,
+    number: state.numberData.number,
 });
 
 /*

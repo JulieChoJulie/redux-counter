@@ -1,40 +1,24 @@
-import * as types from '../actions/ActionTypes';
+import number from './number';
+import color from './color';
 
-const initialState = {
-    color: 'black',
-    number: 0,
-};
+import { combineReducers } from 'redux';
 
-/*
-reducer function: parameters: state and action
-
-if state === undefined ( when store is being created)
-    return initialState
-
-based on action.type -> we create new state and return
-*/
+const reducers = combineReducers({
+    numberData: number,
+    colorData: color,
+});
 
 
-function counter(state = initialState, action) {
-    switch(action.type) {
-        case types.INCREMENT:
-            return {
-            ...state,
-                number: state.number + 1
-            };
-        case types.DECREMENT:
-            return {
-                ...state,
-                number: state.number - 1
-            };
-        case types.SET_COLOR:
-            return {
-                ...state,
-                color: action.color
-            };
-        default:
-            return state;
+/* store ->
+    {
+        numberData: {
+            number: 0
+        },
+        colorData: {
+            color: 'black'
+        }
     }
-};
+ */
 
-export default counter;
+
+export default reducers;
