@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import './Counter.css';
 
 const propTypes = {
     number: PropTypes.number,
@@ -27,13 +28,15 @@ const Counter = ({number, color, onIncrement, onDecrement, onSetColor}) => {
                      onDecrement();
                  }
              }
-             onDobuleClick={onSetColor}
+             onDoubleClick={onSetColor}
              style={{backgroundColor: color}}>
             {number}
         </div>
     )
-}
+};
 
 Counter.propTypes = propTypes;
 Counter.defaultProps = defaultProps;
+
+
 export default Counter;
