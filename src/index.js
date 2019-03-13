@@ -6,7 +6,7 @@ import App from './containers/App';
 
 // Redux
 import { createStore } from 'redux';
-import reducers from './reducers';
+import reducers from './modules';
 import { Provider } from 'react-redux';
 
 // Create Store
